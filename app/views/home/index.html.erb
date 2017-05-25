@@ -1,0 +1,7 @@
+<%= current_user.email %>
+<% @posts.each do |o| %>
+<p>글쓴이 : <%- o.user.email%></p>
+<p><a href="/home/read/<%=o.id>">제목 : <%=o.title%></a></p>
+<% end %>
+
+<a href="/home/create">새 글쓰기</a>
